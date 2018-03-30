@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <link rel="icon" href="img/favicon.ico"/>
+    <link rel="stylesheet" href="css/kykc.css"/>
+    <title>国际包裹查询，国际快递查询 － 快邮快查</title>
+</head>
+<body>
+    <!--顶部信息-->
+    <div class="topInfo">
+        <!--LOGO-->
+        <a href="http://www.expecs.com/">
+            <div class="logo"></div>
+        </a>
+        <!--文字信息-->
+        <div class="exp">
+            <span>
+                <b>*</b>
+                提供各国邮政、DHL、UPS、FEDEX、等快递公司运单查询，累计查询：<span class="scrollNum"></span>
+            </span>
+        </div>
+        <!--搜索框-->
+        <div class="search">
+            <div id="ol">
+                <textarea id="li" cols="2" rows="10" disabled></textarea>
+            </div>
+            <textarea id="c2" name="co" class="texts" cols="40" rows="3" wrap="off"
+                      onblur="check('2')"
+                      onkeyup="keyUp()"
+                      onFocus="clearValue('2')"
+                      onscroll="G('li').scrollTop = this.scrollTop;" oncontextmenu="return false" placeholder="请输入正确快递单号,多个单号以换行分隔"></textarea>
+            <a href="http://www.expecs.com" class="api">API<br><span>接口</span></a>
+            <a href="http://www.expecs.com" class="cx">查询</a>
+        </div>
+        <em class="block" id="msg2"></em>
+        <!--底部图片-->
+        <img class="smallImg" src="img/expecs.png"/>
+    </div>
+    <!--左侧边栏-->
+    <div class="sideBar">
+        <dl>
+            <dt></dt>
+            <dd class="ftName consult">
+                <a href="http://www.kytrack.com/">
+                    <s></s>
+                    <span>包裹查询</span>
+                </a>
+                <div class="sideInfo">
+                    <p>批量查询跨境包裹物流派送信息，支持邮政、DHL、UPS、EMS、FedEX等服务。</p>
+                </div>
+            </dd>
+            <dd class="ftName words">
+                <a href="http://geren.kytrack.com/">
+                    <s class="edu"></s>
+                    <span>进口个人<br>额度查询</span>
+                </a>
+                <div class="sideInfo">
+                    <p>查询通过进口跨境电商渠道购买，已用额度。</p>
+                </div>
+            </dd>
+            <dd class="ftName quote">
+                <a href="http://www.expecs.com/">
+                    <s class="kyzx"></s>
+                    <span>快邮在线</span>
+                </a>
+                <div class="sideInfo">
+                    <p>快邮在线物流综合服务平台为电商及外贸企业提供物流、通关、金融等服务。</p>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/kykc.js"></script>
+    <script type="text/javascript">
+        /*文本框显示行号*/
+        String.prototype.trim2 = function()
+        {
+            return this.replace(/(^\s*)|(\s*$)/g, "");
+        }
+        function F(objid){
+            return document.getElementById(objid).value;
+        }
+        function G(objid){
+            return document.getElementById(objid);
+        }
+        /*滚动数字*/
+        $('.scrollNum').numberRock({
+            speed:34,
+            count:197868
+        });
+        /*侧边栏*/
+        $('.consult').hover(function(){
+            if($('.consult .sideInfo').is(':hidden')){
+                $('.consult .sideInfo').show();
+            }else{
+                $('.consult .sideInfo').hide();
+            }
+        });
+        $('.words').hover(function(){
+            if($('.words .sideInfo').is(':hidden')){
+                $('.words .sideInfo').show();
+            }else{
+                $('.words .sideInfo').hide();
+            }
+        });
+        $('.quote').hover(function(){
+            if($('.quote .sideInfo').is(':hidden')){
+                $('.quote .sideInfo').show();
+            }else{
+                $('.quote .sideInfo').hide();
+            }
+        });
+    </script>
+</body>
+</html>

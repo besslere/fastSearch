@@ -1,0 +1,239 @@
+/*通用样式*/
+body{
+    font: 12px "微软雅黑", "microsoft sans serif",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+/*顶部信息*/
+.topInfo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/bgr.jpg") no-repeat center center/cover;
+}
+.logo{
+    position: relative;
+    width: 320px;
+    height: 80px;
+    margin: 160px auto 0;
+    background: url("../img/logo.png") no-repeat center top/cover;
+}
+.exp{
+    width: 620px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+}
+b{
+    color: #f00;
+    font-size: 16px;
+    padding-right: 5px;
+}
+.search{
+    width: 760px;
+    height: 240px;
+    position: relative;
+    margin: 30px auto;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.2);
+}
+.scrollNum{
+    color: #fff;
+    font-size: 14px;
+}
+/*文本框显示行号*/
+#msg1,#msg2,#msg3,#msg4{
+    display:none
+}
+#ol{
+    position:absolute;
+    top: 17px;
+    left: 17px;
+    height: 205px;
+    z-index:1;
+    padding:0;
+    margin:0;
+    border:0;
+    background:#ecf0f5;
+    width:23px;
+    text-align:left;
+    resize: none;
+    opacity: 0.5;
+}
+#li{
+    background:#ecf0f5;
+    height:199px;
+    overflow:hidden;
+    width:32px;
+    border:none;
+    line-height:20px;
+    margin:0;
+    padding-top:4px;
+    text-align:center;
+    resize: none;
+}
+.texts{
+    float: left;
+    width: 566px;
+    height: 200px;
+    line-height: 20px;
+    font: 18px Courier New,​sans-serif;
+    border: 5px solid #f18200;
+    border-radius: 2px;
+    resize: none;
+    padding: 5px 0 0 45px;
+    margin: 12px;
+    overflow: auto;
+}
+.cx,.api{
+    width: 96px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    background: #f18200;
+    border-radius: 5px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.cx{
+    height: 19px;
+    margin-top: 14px;
+    padding: 33px 0  47px 8px;
+}
+.api{
+    height: 60px;
+    margin-top: 12px;
+    padding: 22px 0  20px 8px;
+}
+.smallImg{
+    display: block;
+    width: 760px;
+    height: 120px;
+    background: url("../img/expecs.png") no-repeat center top/cover;
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+}
+/*左侧边栏*/
+.sideBar {
+    position: fixed;
+    left: 20px;
+    top: 35%;
+}
+.sideBar .ftName {
+    position: relative;
+}
+.sideBar .ftName s {
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    width: 32px;
+    height: 32px;
+    background: url('../img/bg.png') no-repeat center center/cover;
+}
+.sideBar .ftName s.edu {
+    top: 5px;
+    background: url('../img/edu.png') no-repeat center center/cover;
+}
+.sideBar .ftName s.kyzx {
+    background: url('../img/kyzx.png') no-repeat center center/cover;
+}
+.sideBar dl dd {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: #646577;
+    border-bottom: solid 1px #999;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    cursor: pointer;
+}
+.sideBar dd span {
+    color: #fff;
+    display: block;
+    padding-top: 48px;
+}
+.sideBar .words span {
+    padding-top: 40px;
+}
+.sideInfo {
+    position: absolute;
+    left: 90px;
+    top: 0;
+    width: 250px;
+    background-color: #646577;
+    display: none;
+    padding: 12px 10px;
+}
+.words .sideInfo {
+    padding: 20px 10px;
+}
+.sideInfo a, .sideInfo p {
+    color: #fff;
+}
+/*手机端样式*/
+@media screen and (max-width: 768px){
+    .logo{
+        width: 200px;
+        height: 50px;
+        margin: 40px auto 0;
+    }
+    .exp{
+        display: none;
+    }
+    .search{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        background: none;
+    }
+    #ol{
+        display: none;
+    }
+    #li{
+        height: 159px;
+        width: 20px;
+    }
+    .cx{
+        display: block;
+        margin: 20px auto;
+        width: 30%;
+        height: 0;
+        padding: 9px 0 37px 8px;
+    }
+    .api{
+        display: none;
+    }
+    .api span{
+        display: none;
+    }
+    .texts{
+        width: 85%;
+        height: 160px;
+        float: none;
+        font-size: 14px;
+        padding: 5px 0 0 10px;
+    }
+    .smallImg{
+        width: 86%;
+        height: 8%;
+        top: 8%;
+    }
+    .sideBar{
+        display: none;
+    }
+}
